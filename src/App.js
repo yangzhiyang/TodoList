@@ -5,7 +5,6 @@ import './App.css';
 import './reset.css';
 import 'normalize.css';
 
-
 class App extends Component {
   constructor(...args){
     super(...args)
@@ -30,7 +29,7 @@ class App extends Component {
        <TodoInput content={this.state.newTodo}
        onChange={this.changeTitle.bind(this)}
        onSubmit={this.addTodo.bind(this)}/>
-       <ol>
+       <ol className="todoList">
          {todos}
        </ol>
       </div>
