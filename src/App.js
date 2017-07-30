@@ -19,7 +19,7 @@ class App extends Component {
   }
   render() {
     let todos = this.state.todoList.map((item,index)=>{
-      return <li>
+      return <li key={item.id}>
         <TodoItem todo={item}/>
       </li>
     })
@@ -48,7 +48,6 @@ class App extends Component {
       status: null,
       deleted: false
     })
-    //添加todo后初始输入框
     this.setState({
       newTodo:'',
       todoList: this.state.todoList
