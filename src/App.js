@@ -11,7 +11,7 @@ class App extends Component {
     super(...args)
 
     this.state = {
-      newTodo: 'test',
+      newTodo: '',
       todoList: [
         {id:1,title:'第一个事项'},
         {id:2,title:'第二个事项'},
@@ -28,12 +28,19 @@ class App extends Component {
     return (
       <div className="App">
        <h1>我的待办</h1>
-       <TodoInput content={this.state.newTodo}/>
+       <TodoInput content={this.state.newTodo}
+       onChange={this.changeTitle.bind(this)}/>
        <ol>
          {todos}
        </ol>
       </div>
     );
+  }
+  changeTitle(e){
+    this.setState({
+      newTodo: e.target.value,
+      todoList: this.state.todoList
+    })
   }
 }
 
