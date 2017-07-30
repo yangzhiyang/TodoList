@@ -5,8 +5,10 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "homepage": "https://yangzhiyang.github.io/TodoList/build"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
